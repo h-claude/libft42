@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:28:12 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/18 13:01:37 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/18 15:42:04 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	char 	*dest2;
+	char 		*dest2;
 	const char 	*src2;
-	size_t 	i;
+	size_t 		i;
 
 	dest2 = dst;
 	src2 = src;
