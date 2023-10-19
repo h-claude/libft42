@@ -1,46 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 12:28:12 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/18 15:42:04 by hclaude          ###   ########.fr       */
+/*   Created: 2023/10/19 13:47:30 by hclaude           #+#    #+#             */
+/*   Updated: 2023/10/19 17:58:29 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	char		*dest2;
-	const char	*src2;
-	size_t		i;
+	size_t	i;
+	size_t	len;
 
-	dest2 = dst;
-	src2 = src;
 	i = 0;
-	while (i < n)
+	len = 0;
+	while (src[i] != '\0' && i < dstsize - 1 && dstsize != 0)
 	{
-		dest2[i] = src2[i];
+		dst[i] = src[i];
 		i++;
 	}
-	return (dst);
+	dst[i] = '\0';
+	while (src[len] != '\0')
+		len++;
+	return (len);
 }
 /*
+#include <libc.h>
 #include <stdio.h>
 
 int	main(void)
 {
 	char	src[] = "Hello World";
-	char	src1[] = "Hello World";
-	char	dest[] = "Goodbye World";
-	char	dest1[] = "Goodbye World";
+	char	dst[9];
+	char	src2[] = "Hello World";
+	char	dst2[9];
 
-	ft_memcpy(dest, src, 13);
-	printf("%s\n", dest);
-	memcpy(dest1, src1, 13);
-	printf("%s\n", dest1);
-	return (0);
-}*/
+	// ft_strlcpy(dst, src, 5);
+	printf("%lu\n", ft_strlcpy(dst, src, 10));
+	printf("%s\n", dst);
+	printf("%lu\n", strlcpy(dst2, src2, 9));
+	printf("%s\n", dst2);
+}
+*/
