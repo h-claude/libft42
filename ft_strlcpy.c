@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:47:30 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/19 17:58:29 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/19 18:16:04 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(void)
 	char	dst2[9];
 
 	// ft_strlcpy(dst, src, 5);
-	printf("%lu\n", ft_strlcpy(dst, src, 10));
+	printf("%lu\n", ft_strlcpy(dst, src, 9));
 	printf("%s\n", dst);
 	printf("%lu\n", strlcpy(dst2, src2, 9));
 	printf("%s\n", dst2);
