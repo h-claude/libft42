@@ -30,12 +30,13 @@ void	*ft_memset(void *s, int c, size_t n)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	char list[] = "TEST";
+	char	list[] = "TEST";
+	char	list1[] = "TEST";
+
 	ft_memset(list, 90, 1);
 	printf("%s\n", list);
-	char list1[] = "TEST";
 	memset(list1, 90, 1);
 	printf("%s", list1);
 }

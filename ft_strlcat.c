@@ -1,48 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 13:47:30 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/20 13:21:51 by hclaude          ###   ########.fr       */
+/*   Created: 2023/10/20 12:42:01 by hclaude           #+#    #+#             */
+/*   Updated: 2023/10/20 14:12:26 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len;
+	size_t	y;
+	size_t	l;
 
 	i = 0;
-	len = 0;
-	while (src[i] != '\0' && i < dstsize - 1 && dstsize != 0)
+	y = 0;
+	l = 0;
+	while (dst[y] != '\0')
 	{
-		dst[i] = src[i];
+		y++;
+		l++;
+	}
+	while (src[i] != '\0')
+	{
+		if (y < size - 1)
+		{
+			dst[y] = src[i];
+			y++;
+		}
 		i++;
 	}
-	dst[i] = '\0';
-	while (src[len] != '\0')
-		len++;
-	return (len);
+	dst[y] = '\0';
+	return (l + i);
 }
 /*
+#include <bsd/string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char	src[] = "Hello World";
-	char	dst[9];
-	char	src2[] = "Hello World";
-	char	dst2[9];
+	char dst[12] = "Hello ";
+	char src[] = "World !";
+	char dst1[12] = "Hello ";
+	char src1[] = "World !";
 
-	// ft_strlcpy(dst, src, 5);
-	printf("%lu\n", ft_strlcpy(dst, src, 9));
+	// ft_strlcat(dst, src, 10);
+	printf("%ld\n", ft_strlcat(dst, src, 12));
 	printf("%s\n", dst);
-	printf("%lu\n", strlcpy(dst2, src2, 9));
-	printf("%s\n", dst2);
+	printf("%ld\n", strlcat(dst1, src1, 12));
+	printf("%s", dst1);
 }
 */

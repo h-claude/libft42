@@ -48,15 +48,15 @@ int	ft_isalnum(int a)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    printf("%d", ft_isalnum('5'));
-    printf("%d", ft_isalnum('a'));
-    printf("%d", ft_isalnum('Z'));
-    printf("%d", ft_isalnum('9'));
-    printf("%d", ft_isalnum('0'));
-    printf("%d", ft_isalnum('z'));
-    printf("%d", ft_isalnum('@'));
-    printf("%d", ft_isalnum('&'));
+	printf("%d", ft_isalnum('5'));
+	printf("%d", ft_isalnum('a'));
+	printf("%d", ft_isalnum('Z'));
+	printf("%d", ft_isalnum('9'));
+	printf("%d", ft_isalnum('0'));
+	printf("%d", ft_isalnum('z'));
+	printf("%d", ft_isalnum('@'));
+	printf("%d", ft_isalnum('&'));
 }
 */

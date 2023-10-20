@@ -27,12 +27,12 @@ size_t	ft_strlen(const char *s)
 	return (c);
 }
 /*
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-int main(void)
+int	main(void)
 {
-    printf("%d", ft_strlen("TEST"));
-    printf("%d", strlen("TEST"));
+	printf("%d", ft_strlen("TEST"));
+	printf("%d", strlen("TEST"));
 }
 */

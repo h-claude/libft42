@@ -22,9 +22,9 @@ int	ft_isprint(int c)
 #include <ctype.h>
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    printf("%d\n", ft_isprint(30));
-    printf("%d", isprint(30));
+	printf("%d\n", ft_isprint(30));
+	printf("%d", isprint(30));
 }
 */

@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <string.h>
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	char 		*dest2;
-	const char 	*src2;
-	size_t 		i;
+	char		*dest2;
+	const char	*src2;
+	size_t		i;
 
 	dest2 = dst;
 	src2 = src;
@@ -32,7 +31,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 /*
 #include <stdio.h>
 
-int		main(void)
+int	main(void)
 {
 	char	src[] = "Hello World";
 	char	src1[] = "Hello World";

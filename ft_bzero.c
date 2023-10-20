@@ -28,7 +28,7 @@ void	ft_bzero(void *s, size_t n)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	char list[] = "abcd";
 	ft_bzero(list+2, 2);
