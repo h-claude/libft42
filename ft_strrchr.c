@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:27:02 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/21 14:11:08 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/21 14:53:08 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	while (*s != '\0')
 	{
 		s++;
+	}
+	while (*s != c)
+	{
+		s--;
 	}
 	if (*s == c)
 	{
@@ -29,17 +33,17 @@ char	*ft_strchr(const char *s, int c)
 
 int	main(void)
 {
-	char	test[] = "test";
+	char	test[] = "Hello World";
 	int		c;
-	char	test1[] = "test";
+	char	test1[] = "Hello World";
 	int		c1;
-	char	test2[] = "test";
+	char	test2[] = "Hello World";
 	int		c2;
 
-	c = 't';
-	c1 = 't';
-	c2 = 't';
-	printf("%s\n", ft_strchr(test, c));
+	c = 'r';
+	c1 = 'r';
+	c2 = 'r';
+	printf("%s\n", ft_strrchr(test, c));
 	printf("%s\n", strchr(test1, c1));
 	printf("%s", strrchr(test2, c2));
 }
