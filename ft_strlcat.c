@@ -44,10 +44,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 int	main(void)
 {
-	char dst[12] = "Hello ";
-	char src[] = "World !";
-	char dst1[12] = "Hello ";
-	char src1[] = "World !";
+	char	dst[12] = "Hello ";
+	char	src[] = "World !";
+	char	dst1[12] = "Hello ";
+	char	src1[] = "World !";
 
 	// ft_strlcat(dst, src, 10);
 	printf("%ld\n", ft_strlcat(dst, src, 12));

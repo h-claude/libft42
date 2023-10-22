@@ -23,10 +23,11 @@ int	ft_tolower(int c)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	char c = 'A';
+	char	c;
 
+	c = 'A';
 	printf("%c", ft_tolower(c));
 }
 */

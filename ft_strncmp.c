@@ -28,10 +28,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int	main(void)
 {
-	char str1[] = "T";
-	char str2[] = "";
-	char str3[] = "T";
-	char str4[] = "";
+	char	str1[] = "T";
+	char	str2[] = "";
+	char	str3[] = "T";
+	char	str4[] = "";
 
 	printf("%d\n", ft_strncmp(str1, str2, 25));
 	printf("%d", strncmp(str3, str4, 25));
