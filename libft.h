@@ -24,7 +24,7 @@ int	ft_isascii(int a);
 int	ft_isalpha(int a);
 int	ft_isalnum(int a);
 void	ft_bzero(void *s, size_t n);
-int	atoi(const char *nptr);
+int	ft_atoi(const char *nptr);
 
 
 #endif
