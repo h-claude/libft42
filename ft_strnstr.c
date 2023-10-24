@@ -1,53 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 14:47:08 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 11:57:41 by hclaude          ###   ########.fr       */
+/*   Created: 2023/10/24 10:53:06 by hclaude           #+#    #+#             */
+/*   Updated: 2023/10/24 12:00:38 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	const char	*target;
-	size_t		i;
+	size_t	i;
+	int		ilittle;
 
-	target = s;
 	i = 0;
-	if (n == 0)
-		return ((void *) NULL);
-	while (target[i] != '\0' && i != n - 1 && target[i] != c)
+	ilittle = 0;
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (i < len && big[i] != '\0' && little[ilittle] != '\0')
 	{
+		if (big[i] == little[ilittle])
+		{
+			ilittle++;
+		}
+		else
+			ilittle = 0;
 		i++;
 	}
-	if (target[i] == c)
+	if (little[ilittle] == '\0' && ilittle > 0)
 	{
-		return ((void *)target);
+		return ((char *)big + i - ilittle);
 	}
-	return ((void *) NULL);
+	return (NULL);
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	char	str[] = "TESTZ";
-	size_t	n;
-	int		chr;
-	char	str1[] = "TESTZ";
-	size_t	n1;
-	int		chr1;
+	char str[] = "Hello World";
+	char str1[] = "Word    ";
 
-	n = 8;
-	chr = 'Z';
-	n1 = 8;
-	chr1 = 'Z';
-	printf("%p\n", ft_memchr(str, chr, n));
-	printf("%p", memchr(str1, chr1, n1));
+	printf("%s", ft_strnstr(str, str1, 0));
 }
 */

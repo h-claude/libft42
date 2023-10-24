@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:27:02 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/22 15:37:27 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/24 11:58:18 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ int	main(void)
 	char	test2[] = "test";
 	int		c2;
 
-	c = 't';
-	c1 = 't';
-	c2 = 't';
-	printf("%s\n", ft_strchr(test, c));
+	c = 'a';
+	c1 = 'a';
+	c2 = 'a';
+	// printf("%s\n", ft_strchr(test, c));
 	printf("%s\n", strchr(test1, c1));
-	printf("%s", strrchr(test2, c2));
+	// printf("%s", strrchr(test2, c2));
 }
 */

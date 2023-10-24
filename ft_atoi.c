@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 14:23:24 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 12:32:06 by hclaude          ###   ########.fr       */
+/*   Created: 2023/10/24 12:00:54 by hclaude           #+#    #+#             */
+/*   Updated: 2023/10/24 12:15:59 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
-{
-	if (c >= 'A' && c <= 'Z')
-	{
-		c = c + 32;
-	}
-	return (c);
-}
-/*
-#include <stdio.h>
+#include <stdlib.h>
 
-int	main(void)
+int	atoi(const char *nptr)
 {
-	char	c;
-
-	c = 'A';
-	printf("%c", ft_tolower(c));
+	int i;
+	
 }
-*/
