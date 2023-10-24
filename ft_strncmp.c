@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 14:56:17 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/21 15:10:47 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/24 10:13:16 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int	main(void)
 {
-	char	str1[] = "T";
+	char	str1[] = "";
 	char	str2[] = "";
-	char	str3[] = "T";
+	char	str3[] = "";
 	char	str4[] = "";
 
 	printf("%d\n", ft_strncmp(str1, str2, 25));
