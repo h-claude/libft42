@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int ispace(char c)
+static int	ispace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 	{

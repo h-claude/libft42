@@ -26,7 +26,7 @@ int		ft_isalnum(int a);
 void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *nptr);
 void 	*ft_calloc(size_t nmemb, size_t size);
-char 	*ft_strdup(const char *s)
+char 	*ft_strdup(const char *s);
 
 
 #endif

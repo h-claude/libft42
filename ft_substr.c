@@ -1,53 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 10:55:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/25 12:40:26 by hclaude          ###   ########.fr       */
+/*   Created: 2023/10/25 14:42:38 by hclaude           #+#    #+#             */
+/*   Updated: 2023/10/25 15:17:23 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*tab;
+	char	*str;
 	size_t	i;
-	char	*target;
 
-	tab = malloc(nmemb * size);
-	if (tab == NULL)
+	i = 0;
+	str = malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	i = 0;
-	target = tab;
-	while (i < nmemb * size)
+	while (i < len)
 	{
-		target[i] = 0;
+		str[i] = s[start];
 		i++;
+		start++;
 	}
-	return (tab);
+	str[i] = '\0';
+	return (str);
 }
 /*
 #include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
-	void	*str;
-	void	*str1;
+	char	str[] = "Hello World";
 
-	str = ft_calloc(5800,5100);
-	str1 = calloc(5800,5100);
-	printf("ft_calloc : %p\n", str);
-	printf("calloc : %p\n", str1);
-	printf("%d\n", memcmp(str, str1, 2));
-	free(str);
-	free(str1);
+	printf("%s\n", ft_substr(str, 7, 5));
 }
 */

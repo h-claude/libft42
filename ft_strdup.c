@@ -13,10 +13,10 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	size_t i;
-	char *str;
+	size_t	i;
+	char	*str;
 
 	str = malloc(sizeof(char) * ft_strlen(s) + 1);
 	i = 0;
@@ -34,10 +34,10 @@ char *ft_strdup(const char *s)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
-	char str[] = "\n";
-	
+	char	str[] = "\n";
+
 	printf("%s\n", ft_strdup(str));
 	printf("%s\n", strdup(str));
 }
