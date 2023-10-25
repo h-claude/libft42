@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/25 17:09:39 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/25 17:28:49 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	ishere(char c, char const *s2)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s2[i] != '\0')
@@ -29,14 +29,14 @@ static int	ishere(char c, char const *s2)
 
 static int	compteur(char const *s1, char const *set)
 {
-	int	i;
-	int	c;
+	size_t	i;
+	size_t	c;
 
 	i = 0;
 	c = 0;
 	while (s1[i] != '\0')
 	{
-		if (!(ishere(s1[i], set)))
+		if (ishere(s1[i], set))
 			c++;
 		i++;
 	}
@@ -45,8 +45,8 @@ static int	compteur(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		c;
+	size_t	i;
+	size_t	c;
 	char	*str;
 
 	i = 0;
@@ -65,16 +65,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 		c++;
 	}
+	str[i++] = '\0';
 	return (str);
 }
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	char str[] = "Hello World";
-	char s1[] = "R";
-	
+	char	str[] = "Hello Worlddddddddddddddddddd";
+	char	s1[] = "Hellod";
+
 	printf("%s", ft_strtrim(str, s1));
 }
 */
