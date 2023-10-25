@@ -6,13 +6,13 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:00:54 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 17:43:49 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/25 10:54:18 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ispace(char c)
+static int ispace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 	{
@@ -20,8 +20,6 @@ int	ispace(char c)
 	}
 	return (0);
 }
-
-//if ((c >= 9 && c <= 13) || c == 32)
 
 int	ft_atoi(const char *nptr)
 {
@@ -58,4 +56,5 @@ int	main(void)
 
 	printf("%d\n", ft_atoi(str));
 	printf("%d", atoi(str));
-}*/
+}
+*/
