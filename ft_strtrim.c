@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/25 17:28:49 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/26 14:53:52 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i++] = '\0';
 	return (str);
 }
+
 /*
+
 #include <stdio.h>
 
 int	main(void)
 {
-	char	str[] = "Hello Worlddddddddddddddddddd";
-	char	s1[] = "Hellod";
+	char	str[] = "Zidane n10";
+	char	s1[] = " iae";
 
 	printf("%s", ft_strtrim(str, s1));
 }
