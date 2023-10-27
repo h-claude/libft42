@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:42:38 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/25 15:17:23 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:05:01 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-	char	str[] = "Hello World";
+// #include <stdio.h>
 
-	printf("%s\n", ft_substr(str, 7, 5));
-}
-*/
+// int	main(void)
+// {
+// 	char	str[] = "Hello World";
+
+// 	printf("%s\n", ft_substr(str, 7, 5));
+// }

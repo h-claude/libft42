@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:10:06 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 14:46:16 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:58:47 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (c);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	printf("%d", ft_strlen("TEST"));
-	printf("%d", strlen("TEST"));
-}
-*/

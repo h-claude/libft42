@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:47:08 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 14:53:01 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:58:31 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return ((void *) NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	str[] = "TESTZ";
-	size_t	n;
-	int		chr;
-	char	str1[] = "TESTZ";
-	size_t	n1;
-	int		chr1;
-
-	n = 8;
-	chr = 'Z';
-	n1 = 8;
-	chr1 = 'Z';
-	printf("%p\n", ft_memchr(str, chr, n));
-	printf("%p", memchr(str1, chr1, n1));
-}
-*/

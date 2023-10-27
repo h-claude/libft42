@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:27:02 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 14:48:48 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:00:41 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *) NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	test[] = "test";
-	int		c;
-	char	test1[] = "test";
-	int		c1;
-	char	test2[] = "test";
-	int		c2;
-
-	c = 'a';
-	c1 = 'a';
-	c2 = 'a';
-	// printf("%s\n", ft_strchr(test, c));
-	printf("%s\n", strchr(test1, c1));
-	// printf("%s", strrchr(test2, c2));
-}
-*/

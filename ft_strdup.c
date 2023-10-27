@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:07:42 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/25 13:00:37 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:01:12 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	str[] = "\n";
-
-	printf("%s\n", ft_strdup(str));
-	printf("%s\n", strdup(str));
-}
-*/

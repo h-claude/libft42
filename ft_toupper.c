@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:14:43 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 12:32:09 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:00:20 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	c;
-
-	c = 'a';
-	printf("%c", ft_toupper(c));
-}
-*/

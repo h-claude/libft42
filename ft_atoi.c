@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:00:54 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/25 10:54:18 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:57:14 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * negative);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(void)
-{
-	char	str[] = "81484874848748";
-
-	printf("%d\n", ft_atoi(str));
-	printf("%d", atoi(str));
-}
-*/

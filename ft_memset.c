@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:54:15 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 14:49:10 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:58:59 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (target);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	list[] = "TEST";
-	char	list1[] = "TEST";
-
-	ft_memset(list, 90, 1);
-	printf("%s\n", list);
-	memset(list1, 90, 1);
-	printf("%s", list1);
-}
-*/

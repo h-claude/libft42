@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:34:07 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 12:47:08 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:59:40 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char list[] = "abcd";
-	ft_bzero(list+2, 2);
-	printf("%s\n", list);
-	char list2[] = "abcd";
-	bzero(list2+2, 2);
-	printf("%s", list2);
-}*/

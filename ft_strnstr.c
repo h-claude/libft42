@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 10:53:06 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 14:45:30 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:00:51 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char str[] = "Hello World";
-	char str1[] = "Word    ";
-
-	printf("%s", ft_strnstr(str, str1, 0));
-}
-*/

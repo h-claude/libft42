@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:23:24 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 12:32:06 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:00:28 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	c;
-
-	c = 'A';
-	printf("%c", ft_tolower(c));
-}
-*/
