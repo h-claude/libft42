@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:17:49 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 15:40:37 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:50:34 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		y++;
 	}
+	str[y] = '\0';
 	return (str);
 }
 /*
