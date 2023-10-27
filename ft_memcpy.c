@@ -6,17 +6,17 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:28:12 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 13:54:20 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:40:37 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, t_size_t n)
 {
 	char		*dest2;
 	const char	*src2;
-	size_t		i;
+	t_size_t	i;
 
 	dest2 = dst;
 	src2 = src;

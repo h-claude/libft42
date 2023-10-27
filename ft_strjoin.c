@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:17:49 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 13:25:41 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:40:37 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		i;
+	t_size_t	i;
 	char		*str;
 	int			y;
 
@@ -42,8 +42,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 int	main(void)
 {
-	char str1[] = "Hello ";
-	char str2[] = "World";
+	char	str1[] = "Hello ";
+	char	str2[] = "World";
 
 	printf("%s", ft_strjoin(str1, str2));
 }

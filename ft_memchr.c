@@ -6,16 +6,16 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:47:08 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 14:58:31 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:43:02 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, t_size_t n)
 {
 	const char	*target;
-	size_t		i;
+	t_size_t	i;
 
 	target = s;
 	i = 0;

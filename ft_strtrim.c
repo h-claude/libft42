@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/26 14:53:52 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:40:37 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	ishere(char c, char const *s2)
 {
-	size_t	i;
+	t_size_t	i;
 
 	i = 0;
 	while (s2[i] != '\0')
@@ -29,8 +29,8 @@ static int	ishere(char c, char const *s2)
 
 static int	compteur(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	c;
+	t_size_t	i;
+	t_size_t	c;
 
 	i = 0;
 	c = 0;
@@ -45,9 +45,9 @@ static int	compteur(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	c;
-	char	*str;
+	t_size_t	i;
+	t_size_t	c;
+	char		*str;
 
 	i = 0;
 	c = compteur(s1, set);

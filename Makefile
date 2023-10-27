@@ -6,7 +6,7 @@
 #    By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 14:52:17 by hclaude           #+#    #+#              #
-#    Updated: 2023/10/27 13:44:28 by hclaude          ###   ########.fr        #
+#    Updated: 2023/10/27 15:31:36 by hclaude          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,5 +63,4 @@ clean :
 fclean :
 	@rm -rf *.a *.o
 
-re :
-	@fclean all
+re : fclean all
