@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:34:07 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/24 14:52:33 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 12:47:08 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
-	char	*target;
+	size_t		i;
+	char		*target;
 
 	i = 0;
 	target = s;

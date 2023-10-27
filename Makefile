@@ -6,14 +6,21 @@
 #    By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 14:52:17 by hclaude           #+#    #+#              #
-#    Updated: 2023/10/26 15:25:43 by hclaude          ###   ########.fr        #
+#    Updated: 2023/10/27 13:44:28 by hclaude          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+
+AR = ar
+
+ARFLAGS = rcs
+
+CFLAGS = -Wall -Werror -Wextra 
+
+OBJFILES = $(SRCFILES:.c=.o)
 
 SRCFILES = ft_atoi.c  \
 ft_bzero.c \
@@ -40,10 +47,21 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_bzero.c \
 ft_toupper.c
 
-OBJ = $(SRC:.c=.o)
+$(NAME) : $(OBJFILES)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJFILES)
+	
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+all : $(NAME)
 
 clean : 
-		@rm -rf *.o
+	@rm -rf *.o
+
+fclean :
+	@rm -rf *.a *.o
+
+re :
+	@fclean all
