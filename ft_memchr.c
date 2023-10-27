@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:47:08 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 15:43:02 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/27 18:10:12 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	*ft_memchr(const void *s, int c, t_size_t n)
 
 	target = s;
 	i = 0;
-	if (n == 0)
-		return ((void *) NULL);
-	while (target[i] != '\0' && i != n - 1 && target[i] != c)
+	while (target[i] != '\0' && i <= n - 1 && target[i] != c)
 	{
 		i++;
 	}
