@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:27:02 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 15:43:13 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/30 13:06:18 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	int				i;
+	unsigned char	chr;
+
+	i = 0;
+	chr = (unsigned char)c;
+	while (s[i] != '\0' && s[i] != chr)
 	{
 		s++;
 	}
-	if (*s == c)
+	if (s[i] == chr)
 	{
-		return ((char *)s);
+		return ((char *)&s[i]);
 	}
-	return ((char *) NULL);
+	return (NULL);
 }
