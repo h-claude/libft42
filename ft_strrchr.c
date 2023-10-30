@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:27:02 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 15:43:20 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/30 01:32:41 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	while (*s != '\0')
-	{
-		s++;
-	}
-	while (*s != c)
-	{
-		s--;
-	}
-	if (*s == c)
-	{
-		return ((char *)s);
-	}
-	return ((char *) NULL);
-}
-/*
-#include <stdio.h>
+	int				i;
+	unsigned char	chr;
 
-int	main(void)
-{
-	char	test[] = "Hello World";
-	int		c;
-	char	test1[] = "Hello World";
-	int		c1;
-	char	test2[] = "Hello World";
-	int		c2;
-
-	c = 'r';
-	c1 = 'r';
-	c2 = 'r';
-	printf("%s\n", ft_strrchr(test, c));
-	printf("%s\n", strchr(test1, c1));
-	printf("%s", strrchr(test2, c2));
+	i = 0;
+	chr = (unsigned char)c;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	while (i >= 0)
+	{
+		if (s[i] == chr)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
-*/

@@ -3,56 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:42:01 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 15:40:37 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/30 00:21:31 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size_t	ft_strlcat(char *dst, const char *src, t_size_t size)
+t_size_t	ft_strlcat(char *dst, const char *src, t_size_t dstsize)
 {
 	t_size_t	i;
 	t_size_t	y;
-	t_size_t	l;
+	t_size_t	len;
 
-	i = 0;
+	if (ft_memchr(dst, '\0', dstsize) == NULL)
+		return (ft_strlen(src) + dstsize);
+	i = ft_strlen(dst);
+	if (dstsize == 0 || dstsize <= i)
+		return (ft_strlen(src) + dstsize);
+	len = ft_strlen(dst) + ft_strlen(src);
 	y = 0;
-	l = 0;
-	while (dst[y] != '\0')
+	while (i < (dstsize - 1) && src[y])
 	{
-		y++;
-		l++;
-	}
-	while (src[i] != '\0')
-	{
-		if (y < size - 1)
-		{
-			dst[y] = src[i];
-			y++;
-		}
+		dst[i] = src[y];
 		i++;
+		y++;
 	}
-	dst[y] = '\0';
-	return (l + i);
+	dst[i] = '\0';
+	return (len);
 }
-/*
-#include <bsd/string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	char	dst[12] = "Hello ";
-	char	src[] = "World !";
-	char	dst1[12] = "Hello ";
-	char	src1[] = "World !";
-
-	// ft_strlcat(dst, src, 10);
-	printf("%ld\n", ft_strlcat(dst, src, 12));
-	printf("%s\n", dst);
-	printf("%ld\n", strlcat(dst1, src1, 12));
-	printf("%s", dst1);
-}
-*/
