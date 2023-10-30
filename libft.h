@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:24:01 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/30 16:02:05 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/30 17:13:27 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 // # define NULL ((void *)0)
-
 
 typedef unsigned long int	t_size_t;
 

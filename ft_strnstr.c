@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 10:53:06 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/27 15:40:37 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/30 18:26:40 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,13 @@ char	*ft_strnstr(const char *big, const char *little, t_size_t len)
 	}
 	return (NULL);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+	printf("%s", ft_strnstr(haystack, needle, 1));
+}
+
