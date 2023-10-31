@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/30 00:22:48 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/31 17:47:02 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
-	char	str[] = "Zidane n10";
-	char	s1[] = " iae";
+	char	str[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
+	char	s1[] = " \n\t";
 
 	printf("%s", ft_strtrim(str, s1));
 }
-*/
