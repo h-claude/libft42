@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/31 18:07:31 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/31 19:46:30 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,52 +21,33 @@ static int	ishere(char c, char const *s2)
 	while (s2[i] != '\0')
 	{
 		if (c == s2[i])
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
-static int	compteur(char const *s1, char const *set)
+
+char *ft_strtrim(char const *s1, char const *set)
 {
+	t_size_t 	len;
 	t_size_t	i;
 	t_size_t	c;
+	char 		*str;
 
-	i = 0;
-	c = 0;
-	while (s1[i] != '\0')
+	len = ft_strlen(s1);
+	while (ishere(s1[c], set))
 	{
-		if (ishere(s1[i], set))
-			c++;
-		i++;
-	}
-	return (c);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	t_size_t	i;
-	t_size_t	c;
-	char		*str;
-
-	i = 0;
-	c = compteur(s1, set);
-	str = ft_calloc(sizeof(char), (c + 1));
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	c = 0;
-	while (s1[c] != '\0')
-	{
-		if (ishere(s1[c], set))
-		{
-			str[i] = s1[c];
-			i++;
-		}
 		c++;
 	}
-	str[i++] = '\0';
-	return (str);
+	while(ishere(s1[len], set) && len)
+	{
+		len--;
+		c++;
+	}
+	str = ft_calloc(sizeof(char), ft_strlen(s1) - c);
+	while (s1[])
+	
 }
 
 // #include <stdio.h>
