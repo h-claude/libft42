@@ -6,7 +6,7 @@
 #    By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 14:52:17 by hclaude           #+#    #+#              #
-#    Updated: 2023/10/27 15:31:36 by hclaude          ###   ########.fr        #
+#    Updated: 2023/10/31 18:30:23 by hclaude          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,10 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_toupper.c
+ft_toupper.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c \
+ft_putendl_fd.c
 
 $(NAME) : $(OBJFILES)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJFILES)

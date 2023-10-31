@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/31 17:47:02 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/10/31 18:07:31 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	c = compteur(s1, set);
-	str = malloc(sizeof(char) * (c + 1));
+	str = ft_calloc(sizeof(char), (c + 1));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
@@ -69,13 +69,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
+// #include <stdio.h>
 
-#include <stdio.h>
+// int	main(void)
+// {
+// 	char	str[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n ";
+// 	char	s1[] = " \n\t";
 
-int	main(void)
-{
-	char	str[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
-	char	s1[] = " \n\t";
-
-	printf("%s", ft_strtrim(str, s1));
-}
+// 	printf("%s", ft_strtrim(str, s1));
+// }
