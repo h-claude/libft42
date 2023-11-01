@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/11/01 15:48:37 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/01 20:14:14 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	ishere(char c, char const *s2)
 {
-	t_size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (s2[i] != '\0')
@@ -29,16 +29,16 @@ static int	ishere(char c, char const *s2)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	t_size_t	start;
-	t_size_t	end;
-	t_size_t	i;
+	size_t		start;
+	size_t		end;
+	size_t		i;
 	char		*str;
 
 	start = 0;
 	while (s1[start] && ishere(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
-	while (end > start && ishere(s1[end], set))
+	while (end > start && ishere(s1[end - 1], set))
 		end--;
 	str = ft_calloc(sizeof(char), end - start + 1);
 	if (!str)
