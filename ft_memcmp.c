@@ -6,15 +6,15 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 09:43:19 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/30 15:10:31 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/01 18:53:55 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, t_size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	t_size_t	i;
+	size_t		i;
 	const char	*target1;
 	const char	*target2;
 

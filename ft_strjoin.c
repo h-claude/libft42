@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:17:49 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/30 18:08:30 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/01 18:53:55 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	t_size_t	i;
-	char		*str;
-	int			y;
+	size_t	i;
+	char	*str;
+	int		y;
 
 	i = 0;
 	y = 0;

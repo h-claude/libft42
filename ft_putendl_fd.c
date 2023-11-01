@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:28:20 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/31 18:31:31 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/01 18:53:55 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	t_size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

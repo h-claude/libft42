@@ -6,15 +6,15 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 10:53:06 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/31 17:31:41 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/01 18:53:55 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, t_size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	t_size_t	i;
+	size_t	i;
 
 	i = 0;
 	if (ft_strlen(little) == 0)
