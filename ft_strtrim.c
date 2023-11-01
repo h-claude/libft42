@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/10/31 19:46:30 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/01 15:48:37 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,35 +27,28 @@ static int	ishere(char c, char const *s2)
 	return (0);
 }
 
-
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	t_size_t 	len;
+	t_size_t	start;
+	t_size_t	end;
 	t_size_t	i;
-	t_size_t	c;
-	char 		*str;
+	char		*str;
 
-	len = ft_strlen(s1);
-	while (ishere(s1[c], set))
+	start = 0;
+	while (s1[start] && ishere(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ishere(s1[end], set))
+		end--;
+	str = ft_calloc(sizeof(char), end - start + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
 	{
-		c++;
+		str[i] = s1[start];
+		i++;
+		start++;
 	}
-	while(ishere(s1[len], set) && len)
-	{
-		len--;
-		c++;
-	}
-	str = ft_calloc(sizeof(char), ft_strlen(s1) - c);
-	while (s1[])
-	
+	return (str);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	str[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n ";
-// 	char	s1[] = " \n\t";
-
-// 	printf("%s", ft_strtrim(str, s1));
-// }
