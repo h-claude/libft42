@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:49:25 by hclaude           #+#    #+#             */
-/*   Updated: 2023/11/02 16:55:42 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/03 16:29:48 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,20 +85,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	int i;
-
-// 	i = 0;
-// 	char **tab = ft_split("Hello World", ' ');
-// 	while (tab[i] != NULL)
-// 	{
-// 		printf("%s", tab[i]);
-// 		i++;
-// 	}
-// 	// for (int i = 0; tab[i]; i++)
-// 	// {
-// 	// 	printf("%s\n", tab[i]);
-// 	// }
-// }
