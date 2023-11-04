@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:49:25 by hclaude           #+#    #+#             */
-/*   Updated: 2023/11/03 18:53:26 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/04 18:27:45 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	str = (char **)ft_calloc(countstr(s, c) + 1, sizeof(char *));
 	if (!str)
+	{
 		return (NULL);
+	}
 	if (!sub(s, c, str))
 	{
 		freetab(str);
@@ -85,3 +87,8 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
+
+// int main(void)
+// {
+// 	free(ft_split("hello!", ' '));
+// }
