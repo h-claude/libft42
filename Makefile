@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+         #
+#    By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 14:52:17 by hclaude           #+#    #+#              #
-#    Updated: 2023/11/03 17:32:49 by hclaude          ###   ########.fr        #
+#    Updated: 2023/11/04 03:30:45 by hclaude          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ ARFLAGS = rcs
 CFLAGS = -Wall -Werror -Wextra 
 
 OBJFILES = $(SRCFILES:.c=.o)
+OBJFILESBONUS = $(OBJFILES) $(SRCBONUS:.c=.o)
 
 SRCFILES = ft_atoi.c  \
 ft_bzero.c \
@@ -57,16 +58,29 @@ ft_itoa.c \
 ft_strmapi.c \
 ft_striteri.c
 
-$(NAME) : $(OBJFILES)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJFILES)
-	
+SRCBONUS = ft_lstnew.c \
+ft_lstadd_front.c \
+ft_lstsize.c \
+ft_lstlast.c \
+ft_lstadd_back.c \
+ft_lstdelone.c \
+ft_lstclear.c \
+ft_lstiter.c \
+ft_lstmap.c
+
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
 
+$(NAME) : $(OBJFILES)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJFILES)
+
+bonus : $(OBJFILESBONUS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJFILESBONUS)
+
 clean : 
-	@rm -rf *.o
+	@rm -rf $(OBJFILES) $(OBJFILESBONUS)
 
 fclean :
 	@rm -rf *.a *.o
