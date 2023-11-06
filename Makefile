@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hclaude <hclaude@student.42mulhouse.fr>    +#+  +:+       +#+         #
+#    By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 14:52:17 by hclaude           #+#    #+#              #
-#    Updated: 2023/11/04 03:30:45 by hclaude          ###   ########.fr        #
+#    Updated: 2023/11/06 13:33:38 by hclaude          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,6 +83,6 @@ clean :
 	@rm -rf $(OBJFILES) $(OBJFILESBONUS)
 
 fclean :
-	@rm -rf *.a *.o
+	@rm -rf *.o *.a
 
 re : fclean all
