@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:20:49 by hclaude           #+#    #+#             */
-/*   Updated: 2023/11/07 16:44:36 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:48:17 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
-	if (!s || f == NULL)
+	if (!s || !f)
 		return (NULL);
 	str = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!str)
