@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:50:10 by hclaude           #+#    #+#             */
-/*   Updated: 2023/11/06 14:07:10 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:43:22 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char		*str;
 
 	start = 0;
+	if (!s1 || !set)
+		return (NULL);
 	while (s1[start] && ishere(s1[start], set))
 		start++;
 	end = ft_strlen(s1);

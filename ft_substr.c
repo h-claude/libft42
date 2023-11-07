@@ -6,7 +6,7 @@
 /*   By: hclaude <hclaude@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:42:38 by hclaude           #+#    #+#             */
-/*   Updated: 2023/11/06 14:07:17 by hclaude          ###   ########.fr       */
+/*   Updated: 2023/11/07 16:39:12 by hclaude          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 	{
 		str = ft_calloc(sizeof(char), 1);
